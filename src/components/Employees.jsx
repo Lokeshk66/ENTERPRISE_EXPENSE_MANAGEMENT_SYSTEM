@@ -11,7 +11,7 @@ const Employees = () => {
 
   return (
     <Box className="employees-container">
-      <Typography variant="h4" gutterBottom>Employee List</Typography>
+      <Typography variant="h4" gutterBottom ><span className="pan" >Employee List</span></Typography>
       <TableContainer component={Paper}>
         <Table>
           <TableHead>

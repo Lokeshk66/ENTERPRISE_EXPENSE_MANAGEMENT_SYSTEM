@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <AppBar position="static" className="navbar">
       <Toolbar>
-        <Typography variant="h6" className="title">Expense Management</Typography>
+        <Typography variant="h6" className="title">Employee Tracker</Typography>
         <Button color="inherit" onClick={() => navigate("/employees")}>Employees</Button>
         <Button color="inherit" onClick={() => navigate("/tracking")}>Tracking</Button>
         <Button color="inherit" onClick={() => navigate("/approvals")}>Approvals</Button>

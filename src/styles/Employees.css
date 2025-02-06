@@ -1,4 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*{
+  
+
+}
+.pan{
+    font-family: "Oswald";
+    font-weight: 800;
+  font-style: normal;
+  }
 .employees-container {
+    
     margin: 20px;
   }
   
@@ -10,4 +21,5 @@
   .table-header th {
     font-weight: bold;
   }
+  
   
