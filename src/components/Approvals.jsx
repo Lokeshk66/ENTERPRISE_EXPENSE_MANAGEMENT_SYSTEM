@@ -3,14 +3,11 @@ import { Box, Typography, Paper, Grid, Button, Table, TableBody, TableCell, Tabl
 import './../styles/Approvals.css';
 
 const Approvals = () => {
-  // Mock data for demonstration (Employee requests)
   const [requests, setRequests] = useState([
     { id: 1, employeeId: 'E001', name: 'John Doe', requestType: 'Leave', status: 'Pending' },
     { id: 2, employeeId: 'E002', name: 'Jane Smith', requestType: 'Leave', status: 'Pending' },
     { id: 3, employeeId: 'E003', name: 'Alice Johnson', requestType: 'Overtime', status: 'Pending' },
   ]);
-
-  // Handle the approval and decline actions
   const handleApproval = (id, status) => {
     setRequests(requests.map(request =>
       request.id === id ? { ...request, status } : request

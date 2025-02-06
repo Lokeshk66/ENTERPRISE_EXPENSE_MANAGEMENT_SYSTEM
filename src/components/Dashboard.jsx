@@ -15,7 +15,6 @@ import {
   Filler,
 } from 'chart.js';
 
-// Registering the chart.js components
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -25,30 +24,28 @@ ChartJS.register(
   Legend,
   ArcElement,
   LineElement,
-  PointElement, // Required for line charts
-  Filler // If you're using fill for line charts
+  PointElement, 
+  Filler 
 );
 
 const Dashboard = () => {
-  // Dummy data for Employee Expense Categories (Pie Chart)
   const pieData = {
     labels: ['Travel', 'Meals', 'Supplies', 'Other'],
     datasets: [
       {
-        data: [40, 30, 20, 10], // Data representing each category's share
+        data: [40, 30, 20, 10],
         backgroundColor: ['#4caf50', '#ff9800', '#2196f3', '#f44336'],
         hoverBackgroundColor: ['#45a049', '#e68900', '#1976d2', '#d32f2f'],
       },
     ],
   };
 
-  // Dummy data for Expenses by Employee (Bar Chart)
   const barData = {
     labels: ['John Doe', 'Jane Smith', 'Alice Johnson', 'Bob Brown', 'Eva White'],
     datasets: [
       {
         label: 'Total Expenses',
-        data: [500, 700, 450, 600, 800], // Total expenses by employee
+        data: [500, 700, 450, 600, 800], 
         backgroundColor: '#1976d2',
         borderColor: '#1565c0',
         borderWidth: 1,
@@ -58,13 +55,12 @@ const Dashboard = () => {
     ],
   };
 
-  // Dummy data for Total Expenses Trend over 6 Months (Line Chart)
   const lineData = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [
       {
         label: 'Total Expenses Trend',
-        data: [1200, 1400, 1500, 1300, 1700, 1600], // Monthly total expenses
+        data: [1200, 1400, 1500, 1300, 1700, 1600],
         fill: false,
         borderColor: '#ff9800',
         tension: 0.1,
@@ -72,12 +68,11 @@ const Dashboard = () => {
     ],
   };
 
-  // Chart options for better animation and customization
   const options = {
     responsive: true,
     animation: {
-      duration: 1000, // Animation duration
-      easing: 'easeOutElastic', // Elastic animation easing
+      duration: 1000, 
+      easing: 'easeOutElastic',
     },
     plugins: {
       legend: {
@@ -93,12 +88,10 @@ const Dashboard = () => {
     },
   };
 
-  // Use ref to store chart instance and destroy it on unmount
   const chartRef = useRef(null);
 
   useEffect(() => {
     return () => {
-      // Destroy the chart instance to prevent the canvas conflict
       if (chartRef.current) {
         chartRef.current.destroy();
       }
@@ -112,7 +105,7 @@ const Dashboard = () => {
       </Typography>
 
       <Grid container spacing={3}>
-        {/* Pie Chart for Expense Categories */}
+        
         <Grid item xs={12} md={6}>
           <Paper elevation={3} padding={3}>
             <Typography variant="h6" gutterBottom>
@@ -122,7 +115,6 @@ const Dashboard = () => {
           </Paper>
         </Grid>
 
-        {/* Bar Chart for Expenses by Employee */}
         <Grid item xs={12} md={6}>
           <Paper elevation={3} padding={3}>
             <Typography variant="h6" gutterBottom>
@@ -132,7 +124,6 @@ const Dashboard = () => {
           </Paper>
         </Grid>
 
-        {/* Line Chart for Total Expenses Trend */}
         <Grid item xs={12} md={6}>
           <Paper elevation={3} padding={3}>
             <Typography variant="h6" gutterBottom>
@@ -142,7 +133,6 @@ const Dashboard = () => {
           </Paper>
         </Grid>
 
-        {/* Additional Chart (Doughnut Chart) for Department Expenses */}
         <Grid item xs={12} md={6}>
           <Paper elevation={3} padding={3}>
             <Typography variant="h6" gutterBottom>

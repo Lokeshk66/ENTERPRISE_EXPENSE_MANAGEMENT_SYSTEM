@@ -3,19 +3,16 @@ import { Box, Typography, Paper, Grid, Button, Table, TableBody, TableCell, Tabl
 import './../styles/Tracking.css';
 
 const Tracking = () => {
-  // Initial state with mock data for demonstration
   const [activities, setActivities] = useState([
     { id: 1, employeeId: 'E001', name: 'John Doe', activity: 'Logged in', timestamp: '2025-02-06 09:00 AM' },
     { id: 2, employeeId: 'E001', name: 'John Doe', activity: 'Started Task 1', timestamp: '2025-02-06 09:30 AM' },
     { id: 3, employeeId: 'E002', name: 'Jane Smith', activity: 'Logged in', timestamp: '2025-02-06 09:10 AM' },
     { id: 4, employeeId: 'E002', name: 'Jane Smith', activity: 'Completed Task 1', timestamp: '2025-02-06 10:00 AM' },
-    // Add more mock data here...
+
   ]);
   
-  // State to store the search query
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Filter the activities based on the search query
   const filteredActivities = activities.filter((activity) =>
     activity.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     activity.employeeId.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -26,7 +23,6 @@ const Tracking = () => {
     <Box className="tracking-container">
       <Typography variant="h4" gutterBottom>Employee Activity Tracking</Typography>
 
-      {/* Search Bar */}
       <TextField
         label="Search by Name, ID or Activity"
         variant="outlined"

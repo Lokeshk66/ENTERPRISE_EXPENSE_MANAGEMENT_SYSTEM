@@ -1,4 +1,4 @@
-/* Styling for the Dashboard layout */
+
 .dashboard-container {
     padding: 20px;
   }
@@ -16,8 +16,6 @@
   .MuiTypography-root {
     margin-bottom: 20px;
   }
-  
-  /* Styling for the Grid Layout */
   @media (max-width: 768px) {
     .MuiGrid-item {
       margin-bottom: 20px;
