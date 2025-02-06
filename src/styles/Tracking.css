@@ -1,0 +1,40 @@
+.tracking-container {
+    padding: 20px;
+  }
+  
+  .tracking-card {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  table {
+    min-width: 650px;
+  }
+  
+  .MuiTableCell-head {
+    font-weight: bold;
+    background-color: #1976d2;
+    color: white;
+  }
+  
+  .MuiTableRow-root:hover {
+    background-color: #f1f1f1;
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  .activity-grid {
+    margin-top: 20px;
+  }
+  

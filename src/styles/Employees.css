@@ -1,0 +1,13 @@
+.employees-container {
+    margin: 20px;
+  }
+  
+  .table-header {
+    background-color: #1976d2;
+    color: white;
+  }
+  
+  .table-header th {
+    font-weight: bold;
+  }
+  
