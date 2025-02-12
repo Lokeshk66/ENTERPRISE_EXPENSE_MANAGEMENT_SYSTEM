@@ -32,7 +32,7 @@ const Dashboard = () => {
     };
   }, []);
 
-  // 🟢 Expense Data by Category
+
   const expenseData = [
     { category: 'Travel', amount: 5000 },
     { category: 'Meals', amount: 3500 },
@@ -40,7 +40,7 @@ const Dashboard = () => {
     { category: 'Other', amount: 1500 },
   ];
 
-  // 🟢 Monthly Expense Data
+
   const monthlyExpenses = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     datasets: [
@@ -55,7 +55,7 @@ const Dashboard = () => {
     ],
   };
 
-  // 🟢 Yearly Expense Data
+  //Yearly Expense Data
   const yearlyExpenses = {
     labels: ['2020', '2021', '2022', '2023', '2024'],
     datasets: [
@@ -101,7 +101,6 @@ const Dashboard = () => {
 
       <Grid container spacing={3}>
         
-        {/* 🟢 Expense Category Breakdown Chart */}
         <Grid item xs={12} md={6}>
           <Paper elevation={3} sx={{ padding: 3 }}>
             <Typography variant="h6" gutterBottom>
@@ -121,8 +120,6 @@ const Dashboard = () => {
             />
           </Paper>
         </Grid>
-
-        {/* 🟢 Expense Breakdown Table */}
         <Grid item xs={12} md={6}>
           <Paper elevation={3} sx={{ padding: 3 }}>
             <Typography variant="h6" gutterBottom>
@@ -148,8 +145,6 @@ const Dashboard = () => {
             </TableContainer>
           </Paper>
         </Grid>
-
-        {/* 🟢 Monthly Expense Chart */}
         <Grid item xs={12} md={6}>
           <Paper elevation={3} sx={{ padding: 3 }}>
             <Typography variant="h6" gutterBottom>
@@ -159,7 +154,7 @@ const Dashboard = () => {
           </Paper>
         </Grid>
 
-        {/* 🟢 Yearly Expense Trend Chart */}
+      
         <Grid item xs={12} md={6}>
           <Paper elevation={3} sx={{ padding: 3 }}>
             <Typography variant="h6" gutterBottom>

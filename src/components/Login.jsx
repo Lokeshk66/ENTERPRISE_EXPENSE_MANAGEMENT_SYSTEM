@@ -7,15 +7,10 @@ const Login = () => {
   const [role, setRole] = useState("SELECT");
   const navigate = useNavigate();
 
-  const renderContent = () => {
-    switch (role) {
-      case "Admin":
-        return "You have full access to the system, including user management and settings.";
-      case "Manager":
-        return "You can manage employees and view reports.";
-      case "Employee":
-      default:
-        return "You have limited access to perform your tasks.";
+  const handleLogin = () => {
+    if (role !== "SELECT") {
+      localStorage.setItem("isAuthenticated", "true");
+      navigate("/dashboard");
     }
   };
 
@@ -23,7 +18,7 @@ const Login = () => {
     <Container className="container">
       <Card className="card">
         <CardContent>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" gutterBottom style={{ color: "#fff", fontWeight: "bold" }}>
             Role-Based Access Control
           </Typography>
           <Select
@@ -32,19 +27,19 @@ const Login = () => {
             className="select"
             variant="outlined"
           >
+            <MenuItem value="SELECT" disabled>Select Role</MenuItem>
             <MenuItem value="Employee">Employee</MenuItem>
             <MenuItem value="Manager">Manager</MenuItem>
             <MenuItem value="Admin">Admin</MenuItem>
           </Select>
-          <Typography variant="body1" gutterBottom>
-            {renderContent()}
+          <Typography variant="body1" gutterBottom style={{ color: "#fff" }}>
+            {role === "Admin"
+              ? "You have full access to the system"
+              : role === "Manager"
+              ? "You can manage employees and view reports."
+              : "You have limited access to perform your tasks."}
           </Typography>
-          <Button
-            variant="contained"
-            color="primary"
-            className="button"
-            onClick={() => navigate("/employees")}
-          >
+          <Button variant="contained" className="button" onClick={handleLogin}>
             Proceed
           </Button>
         </CardContent>

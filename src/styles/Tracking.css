@@ -5,11 +5,13 @@
   .tracking-card {
     padding: 20px;
     margin-bottom: 20px;
+    margin-top: 15px;
   }
   
   .card-title {
     font-weight: bold;
     margin-bottom: 15px;
+    margin-top: 15px;
   }
   
   table {
@@ -35,6 +37,6 @@
   }
   
   .activity-grid {
-    margin-top: 20px;
+    margin-top: 40px;
   }
   

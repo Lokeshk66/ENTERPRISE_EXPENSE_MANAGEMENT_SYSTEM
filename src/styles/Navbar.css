@@ -1,8 +1,18 @@
 .navbar {
-    background-color: #1976d2;
-  }
-  
-  .title {
-    flex-grow: 1;
-  }
-  
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+}
+
+.title {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+button {
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}

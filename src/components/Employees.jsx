@@ -23,6 +23,7 @@ import {
   IconButton,
   InputLabel,
   FormControl,
+  Fab,
 } from "@mui/material";
 import { Add, Edit, Delete, AttachFile, Visibility } from "@mui/icons-material";
 import "../styles/Employees.css";
@@ -99,13 +100,12 @@ const Employees = () => {
     <Container className="expenses-container">
       <Card className="expense-card">
         <CardContent>
-          <Typography variant="h4" gutterBottom className="title">
-            Expense Management
-          </Typography>
           <Box display="flex" justifyContent="space-between" alignItems="center">
-            <Button variant="contained" color="primary" startIcon={<Add />} onClick={() => handleOpen()}>
-              Add Expense
-            </Button>
+            
+            <Fab color="primary" aria-label="add" onClick={() => handleOpen()}>
+              <Add />
+            </Fab>
+
             <FormControl variant="outlined" className="filter-dropdown">
               <InputLabel>Filter by Category</InputLabel>
               <Select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} label="Filter by Category">

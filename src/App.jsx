@@ -6,6 +6,8 @@ import Tracking from "./components/Tracking";
 import Approvals from "./components/Approvals";
 import Dashboard from "./components/Dashboard";
 import Navbar from "./components/Navbar";
+import "./App.css";
+
 
 const App = () => {
   return (
