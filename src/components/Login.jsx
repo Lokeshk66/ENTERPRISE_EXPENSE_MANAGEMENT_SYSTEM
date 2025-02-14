@@ -18,7 +18,7 @@ const Login = () => {
     <Container className="container">
       <Card className="card">
         <CardContent>
-          <Typography variant="h5" gutterBottom style={{ color: "#fff", fontWeight: "bold" }}>
+          <Typography variant="h5" gutterBottom style={{ color: "blue", fontWeight: "bold" }}>
             Role-Based Access Control
           </Typography>
           <Select
@@ -32,13 +32,6 @@ const Login = () => {
             <MenuItem value="Manager">Manager</MenuItem>
             <MenuItem value="Admin">Admin</MenuItem>
           </Select>
-          <Typography variant="body1" gutterBottom style={{ color: "#fff" }}>
-            {role === "Admin"
-              ? "You have full access to the system"
-              : role === "Manager"
-              ? "You can manage employees and view reports."
-              : "You have limited access to perform your tasks."}
-          </Typography>
           <Button variant="contained" className="button" onClick={handleLogin}>
             Proceed
           </Button>
